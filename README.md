@@ -54,5 +54,8 @@ The Tech Hunt Point is a web application where users can discover, share, and in
 - react-toastify
 
 ## Run the Project Locally
-Clone the repository:
-git clone https://github.com/mahmudanusrat/tech-hunt-point.git
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/mahmudanusrat/tech-hunt-point.git
+
