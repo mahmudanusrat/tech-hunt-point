@@ -35,7 +35,7 @@ const WhoKnow = () => {
         ].map((review) => (
           <div
             key={review.id}
-            className="bg-[#f8f3eb] p-6 rounded-lg shadow transform transition-transform duration-300 hover:scale-105 will-change-transform"
+            className="bg-[#f8f3eb] p-6 py-16 text-center rounded-lg shadow transform transition-transform duration-300 hover:scale-105 will-change-transform"
           >
             <p className="italic">{review.review}</p>
             <h4 className="mt-4 font-bold">{review.user}</h4>

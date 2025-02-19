@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
 const faqData = [
   {
@@ -29,36 +30,50 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null); // Track the active question
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const handleToggle = (index) => {
-    // If the current question is already active, set it to null (close it). Otherwise, open the clicked question.
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-      <div className="space-y-4">
-        {faqData.map((faq, index) => (
-          <div
-            key={index}
-            className="border border-base-300 bg-base-100 rounded-lg"
-          >
-            <div
-              className="text-xl font-medium cursor-pointer p-4 hover:bg-gray-200"
-              onClick={() => handleToggle(index)}
-            >
-              {faq.question}
-            </div>
-            {/* Conditionally render the answer if the question is clicked */}
-            {activeIndex === index && (
-              <div className="p-4 bg-gray-50">
-                <p>{faq.answer}</p>
+    <div className="text-[#003a43] bg-[#f8f3eb]">
+      <div className="container py-20 px-6 mx-auto">
+        <h1 className="text-5xl font-semibold tracking-wide mb-16 text-center dark:text-white">
+          Frequently Asked Questions
+        </h1>
+        <div className="space-y-4 max-w-6xl mx-auto">
+          {faqData.map((faq, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <div
+                key={index}
+                className={`border border-base-300 rounded-lg ${
+                  isActive ? "bg-[#8ca7a229]" : ""
+                }`}
+              >
+                <div
+                  className="flex justify-between items-center text-xl font-medium cursor-pointer p-4 hover:bg-[#8ca7a229]"
+                  onClick={() => handleToggle(index)}
+                >
+                  <span>{faq.question}</span>
+                  <span>
+                    {isActive ? (
+                      <FiMinus className="text-2xl" />
+                    ) : (
+                      <FiPlus className="text-2xl" />
+                    )}
+                  </span>
+                </div>
+                {isActive && (
+                  <div className="p-4">
+                    <p>{faq.answer}</p>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
