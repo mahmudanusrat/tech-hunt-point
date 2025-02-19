@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -7,8 +8,8 @@ export default {
   theme: {
     extend: {},
   },
+  darkMode: 'class', 
   plugins: [
     require('daisyui'),
   ],
 }
-
