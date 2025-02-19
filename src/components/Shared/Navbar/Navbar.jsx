@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+ 
   // Check the local storage on initial load
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");

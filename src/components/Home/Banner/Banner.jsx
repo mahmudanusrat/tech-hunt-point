@@ -6,6 +6,9 @@ import banner1 from '../../../assets/banner1.json'
 import banner2 from '../../../assets/banner2.json'
 
 const Banner = () => {
+  const handleJoinNow = () => {
+    window.open("https://your-group-link.com", "_blank"); // 🔗 Replace with your actual group link
+  };
   return (
     <div className="rounded-3xl bg-[#ebf0ef] text-[#003a43] relative py-20 px-6 text-center overflow-hidden dark:bg-[#1f1f1f] dark:text-white">
       <div className="container mx-auto ">
@@ -60,8 +63,8 @@ const Banner = () => {
               Explore Products
             </button>
           </Link>
-          <Link to="/products">
-            <button className="bg-transparent border-2 border-[#003a43] dark:border-white px-4 py-3 md:px-8 md:py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
+          <Link >
+            <button  onClick={handleJoinNow} className="bg-transparent border-2 border-[#003a43] dark:border-white px-4 py-3 md:px-8 md:py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
               Join the Community
             </button>
           </Link>

@@ -4,6 +4,9 @@ import Lottie from "lottie-react";
 import hands from '../../../assets/hands.json';
 
 const Community = () => {
+    const handleJoinNow = () => {
+        window.open("https://your-group-link.com", "_blank"); // 🔗 Replace with your actual group link
+      };
   return (
     <div className="text-[#003a43] bg-[#c5d6d7] dark:bg-[#303030] dark:text-white">
       <div className="container mx-auto py-20 px-6">
@@ -17,8 +20,8 @@ const Community = () => {
               trending products.
             </p>
             <div>
-              <Link to="/products">
-                <button className="bg-[#ff8d6e] border-2 hover:border-[#ff8d6e] px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-[#ffb19c] transition duration-300 shadow-lg">
+              <Link >
+                <button onClick={handleJoinNow} className="bg-[#ff8d6e] border-2 hover:border-[#ff8d6e] px-4 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-[#ffb19c] transition duration-300 shadow-lg">
                   Join Now
                 </button>
               </Link>

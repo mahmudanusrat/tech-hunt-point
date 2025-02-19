@@ -35,8 +35,7 @@ const UpcomingEvents = () => {
           Upcoming Events & New Releases
         </h1>
         <p className="text-xl">
-          Curating only the best in tech is literally what we do. All day. Every
-          day. We're very good at it.
+        The tech industry is set to unveil a range of innovative products and host several major events.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
