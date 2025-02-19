@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed top-0 left-0 shadow-md z-50 bg-white dark:bg-[#333436] border-b-[1px]">
+    <nav className="w-full fixed top-0 left-0 shadow-md z-50 bg-white dark:bg-[#303030] border-b-[1px]">
       <div className="container mx-auto flex justify-between items-center py-3 px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`absolute md:static top-16 left-0 w-full bg-white dark:bg-[#333436] md:flex md:items-center md:space-x-4 md:w-auto transition-transform ${
+          className={`absolute md:static top-16 left-0 w-full bg-white dark:bg-[#303030] md:flex md:items-center md:space-x-4 md:w-auto transition-transform ${
             menuOpen ? "block" : "hidden"
           } md:block`}
         >

@@ -7,12 +7,14 @@ import banner2 from '../../../assets/banner2.json'
 
 const Banner = () => {
   return (
-    <div className="rounded-3xl bg-[#ebf0ef] text-[#003a43] relative py-20 px-6 text-center overflow-hidden">
+    <div className="rounded-3xl bg-[#ebf0ef] text-[#003a43] relative py-20 px-6 text-center overflow-hidden dark:bg-[#1f1f1f] dark:text-white">
+      <div className="container mx-auto ">
       <div className="absolute top-0 left-0 w-40 h-40 bg-blue-300 rounded-full opacity-30 animate-pulse blur-lg"></div>
       <div className="absolute bottom-0 right-0 w-40 h-40 bg-orange-300 rounded-full opacity-30 animate-pulse blur-lg"></div>
+      <div className="absolute bottom-50 right-30 w-40 h-40 bg-orange-300 rounded-full opacity-30 animate-pulse blur-lg"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <h1 className="text-5xl font-semibold tracking-wide mb-6">
           Empowering the Next Generation of Tech Innovators 🚀
         </h1>
@@ -59,7 +61,7 @@ const Banner = () => {
             </button>
           </Link>
           <Link to="/products">
-            <button className="bg-transparent border-2 border-[#003a43] px-8 py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
+            <button className="bg-transparent border-2 border-[#003a43] dark:border-white px-8 py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
               Join the Community
             </button>
           </Link>
@@ -75,6 +77,8 @@ const Banner = () => {
         style={{ height: "300px", width: "300px" }}
       />
       </div>
+        </div>
+        
      
     </div>
   );
