@@ -45,3 +45,18 @@ The Tech Hunt Point is a web application where users can discover, share, and in
 - Database: MongoDB
 - Authentication: Firebase, JWT
 - State Management: Context API
+  
+## Dependencies
+- react
+- react-router-dom
+- react-hook-form
+- tailwindcss
+- firebase
+- react-toastify
+
+## Run the Project Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/mahmudanusrat/tech-hunt-point.git
+
