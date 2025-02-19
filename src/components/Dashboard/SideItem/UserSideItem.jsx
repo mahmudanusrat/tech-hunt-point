@@ -15,9 +15,7 @@ const UserSideItem = () => {
         icon={MdOutlineManageHistory}
         label="My Products"
         address="my-products"
-      />
-      <SideItem icon={MdHomeWork} label="My Profile" address="my-Profile" />
-    </div>
+      /></div>
   );
 };
 

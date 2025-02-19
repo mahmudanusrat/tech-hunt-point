@@ -9,6 +9,9 @@ import AdminSideItem from "./SideItem/AdminSideItem";
 import ModeratorSideItem from "./SideItem/ModeratorSideItem";
 import useRole from "../../hooks/useRole";
 import { FaLongArrowAltUp } from "react-icons/fa";
+import SideItem from "./SideItem/SideItem";
+import { FcSettings } from "react-icons/fc";
+import { MdHomeWork } from "react-icons/md";
 
 const Sidebar = () => {
   const { logOut } = useAuth();
@@ -59,6 +62,11 @@ const Sidebar = () => {
         </div>
         <div>
           <hr />
+          <SideItem
+            icon={MdHomeWork}
+            label='My Profile'
+            address='/dashboard'
+          />
           <button
             onClick={logOut}
             className="flex w-full items-center px-4 py-2 mt-5  hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform"

@@ -2,7 +2,7 @@ import React from "react";
 
 const WhoKnow = () => {
   return (
-    <div className="container pb-20 px-6 text-[#003a43] mx-auto">
+    <div className="container py-20 px-6 text-[#003a43] mx-auto">
       <div className="mb-6 space-y-3 text-center dark:text-white">
         <h1 className="text-5xl font-semibold tracking-wide">
           The People Who Know Products

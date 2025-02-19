@@ -17,7 +17,7 @@ const Home = () => {
       <FeatureProducts></FeatureProducts>
       <TrendingProducts></TrendingProducts>
       {/* <UserReviews></UserReviews> */}
-      <TopContributors></TopContributors>
+      {/* <TopContributors></TopContributors> */}
       <WhoKnow></WhoKnow>
       <UpcomingEvents></UpcomingEvents>
       <Community></Community>

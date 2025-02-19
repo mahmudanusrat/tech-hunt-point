@@ -57,7 +57,7 @@ const MyProfile = () => {
   }
 
   return (
-    <div className="min-h-screen p-8 bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen p-8 bg-gray-100 dark:bg-[#303030] flex items-center justify-center">
       <Helmet>
         <title>Your Profile</title>
       </Helmet>

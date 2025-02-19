@@ -41,13 +41,14 @@ const Statistics = () => {
   return (
     <div>
       <Helmet>Statistic</Helmet>
-      <div className="p-6">
-      <h1 className="text-3xl font-semibold text-center text-[#003a43]">
-      Platform Insights</h1>
+      <div className="p-6 dark:bg-[#303030] dark:text-white ">
+        <h1 className="text-3xl font-semibold text-center dark:text-white text-[#003a43]">
+          Platform Insights
+        </h1>
         <div className="mt-12">
           <div className="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <div className="relative flex flex-col rounded-xl shadow-md">
-              <div className="absolute -mt-4 mx-4 h-14 w-14 grid place-items-center bg-gradient-to-tr from-green-600 to-green-400 text-white rounded-xl">
+            <div className="relative flex flex-col rounded-xl shadow-md dark:border-white">
+              <div className="absolute -mt-4 mx-4 h-14 w-14 grid place-items-center bg-gradient-to-tr from-green-600 to-green-400 text-white rounded-xl dark:text-white ">
                 <FaUserAlt className="w-5 h-5" />
               </div>
               <div className="p-4 text-right">
@@ -60,7 +61,7 @@ const Statistics = () => {
               </div>
             </div>
 
-            <div className="relative flex flex-col bg-white rounded-xl shadow-md">
+            <div className="relative flex flex-col bg-white rounded-xl shadow-md dark:text-white dark:bg-[#303030]">
               <div className="absolute -mt-4 mx-4 h-14 w-14 grid place-items-center bg-gradient-to-tr from-blue-600 to-blue-400 text-white rounded-xl">
                 <BsFillCartPlusFill className="w-5 h-5" />
               </div>
@@ -74,7 +75,7 @@ const Statistics = () => {
               </div>
             </div>
 
-            <div className="relative flex flex-col bg-white rounded-xl shadow-md">
+            <div className="relative flex flex-col bg-white rounded-xl shadow-md dark:bg-[#303030]">
               <div className="absolute -mt-4 mx-4 h-14 w-14 grid place-items-center bg-gradient-to-tr from-pink-600 to-pink-400 text-white rounded-xl">
                 <BsFillHouseDoorFill className="w-5 h-5" />
               </div>
@@ -90,7 +91,7 @@ const Statistics = () => {
           </div>
           <div className="mb-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* Pie Chart */}
-            <div className="relative flex flex-col bg-white rounded-xl shadow-md lg:col-span-2 p-4">
+            <div className="relative flex flex-col bg-white rounded-xl shadow-md lg:col-span-2 p-4 dark:bg-[#303030]">
               <h2 className="text-xl font-semibold mb-4">
                 Site Statistics Overview
               </h2>
@@ -121,7 +122,7 @@ const Statistics = () => {
                 </ResponsiveContainer>
               </div>
             </div>
-            <div className="relative flex flex-col bg-white rounded-xl shadow-md p-4 lg:col-span-2">
+            <div className="relative flex flex-col bg-white rounded-xl shadow-md p-4 lg:col-span-2 dark:bg-[#303030]">
               <h2 className="text-xl font-semibold mb-4">Calendar</h2>
               <div className="w-full h-full">
                 <Calendar

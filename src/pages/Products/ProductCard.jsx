@@ -13,7 +13,7 @@ const ProductCard = ({ product, refetch }) => {
   const { handleVote, handleReport } = useProductActions(_id, refetch);
 
   return (
-    <div className="max-w-full border rounded-lg shadow-md overflow-hidden hover:bg-slate-100 text-[#003a43] dark:text-white dark:bg-[#1f1f1f] dark:hover:bg-[#303030]">
+    <div className="bg-[#ebf0ef] max-w-full border rounded-lg shadow-md overflow-hidden hover:bg-slate-100 text-[#003a43] dark:text-white dark:bg-[#1f1f1f] dark:hover:bg-[#303030]">
       <div className="flex items-center p-4">
         <Link to={`/products/${_id}`} className="flex gap-3 items-center">
           <img

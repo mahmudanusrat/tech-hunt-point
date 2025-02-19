@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
+
 import avatarImg from "../../../assets/placeholder.jpg";
 import useAuth from "../../../hooks/useAuth";
 import logo from "../../../assets/logo.png";
@@ -84,6 +86,24 @@ const Navbar = () => {
           >
             Products
           </NavLink>
+          <ScrollLink
+          to="trending-products"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer block md:inline text-md font-medium transition p-2 md:p-0 text-[#003a43] dark:text-white"
+        >
+          Trending Products
+        </ScrollLink>
+          <ScrollLink
+          to="faq"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer block md:inline text-md font-medium transition p-2 md:p-0 text-[#003a43] dark:text-white"
+        >
+          FAQ
+        </ScrollLink>
+
+
 
           {user ? (
             <>

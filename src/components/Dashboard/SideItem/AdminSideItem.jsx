@@ -9,7 +9,7 @@ const AdminSideItem = () => {
             <SideItem
                 icon={BsFillHouseAddFill}
                 label='Statistics'
-                address='/dashboard'
+                address='statistic'
               />
               <SideItem icon={FaUsers} label='Manage Users' address='manage-users' />
               <SideItem icon={FaTicket} label='Manage Coupons' address='manage-coupons' />

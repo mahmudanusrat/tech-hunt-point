@@ -67,11 +67,11 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="text-[#003a43] bg-gray-50 min-h-screen">
+    <div className="text-[#003a43] bg-gray-50 min-h-screen dark:bg-[#303030] ">
       <Helmet>
         <title>Add Product | Dashboard</title>
       </Helmet>
-      <div className="max-w-4xl mx-auto shadow-xl rounded-xl p-8">
+      <div className="max-w-4xl mx-auto shadow-xl rounded-xl p-8 dark:text-white">
         <div className="text-center space-y-3 mb-5 ">
           <h1 className="text-3xl font-semibold">Add Your Product</h1>
           <p className="text-xl">Share your innovation with the world.</p>
@@ -79,12 +79,12 @@ const AddProduct = () => {
         <form onSubmit={handleSubmit} className="space-y-4 text-[#003a43]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* Product Name */}
-            <div className="form-control">
+            <div className="form-control ">
               <label htmlFor="name" className="label">
-                <span className="label-text">Product Name</span>
+                <span className="label-text dark:text-white">Product Name</span>
               </label>
               <input
-                className="input input-bordered w-full"
+                className="input input-bordered w-full dark:text-white dark:bg-[#303030] dark:border-white"
                 name="name"
                 id="name"
                 type="text"
@@ -95,7 +95,7 @@ const AddProduct = () => {
             {/* Image Upload */}
             <div className="form-control">
               <label htmlFor="image" className="label">
-                <span className="label-text">Product Image</span>
+                <span className="label-text dark:text-white">Product Image</span>
               </label>
               <input
                 onChange={(e) =>
@@ -104,7 +104,7 @@ const AddProduct = () => {
                     url: URL.createObjectURL(e.target.files[0]),
                   })
                 }
-                className="file-input file-input-bordered w-full"
+                className="file-input file-input-bordered w-full dark:text-white dark:bg-[#303030] dark:border-white"
                 type="file"
                 name="image"
                 id="image"
@@ -115,19 +115,19 @@ const AddProduct = () => {
             {/* Description */}
             <div className="form-control lg:col-span-2">
               <label htmlFor="description" className="label">
-                <span className="label-text">Description</span>
+                <span className="label-text dark:text-white">Description</span>
               </label>
               <textarea
                 id="description"
                 placeholder="Enter product description"
-                className="textarea textarea-bordered bg-white"
+                className="textarea textarea-bordered bg-white dark:text-white dark:bg-[#303030] dark:border-white"
                 name="description"
               ></textarea>
             </div>
             {/* Tags */}
             <div className="form-control">
               <label htmlFor="tags" className="label">
-                <span className="label-text">Tags</span>
+                <span className="label-text dark:text-white">Tags</span>
               </label>
               <ReactTags
                 tags={tags}
@@ -135,7 +135,7 @@ const AddProduct = () => {
                 handleAddition={handleAddition}
                 placeholder="Add a tag"
                 classNames={{
-                  tags: "flex flex-wrap gap-2 p-2 border rounded-md bg-gray-50",
+                  tags: "flex flex-wrap gap-2 p-2 border rounded-md bg-gray-50 dark:text-white dark:bg-[#303030] dark:border-white ",
                   tagInputField: "p-2 rounded-md w-full bg-white",
                   tag: "bg-lime-200 p-2 rounded-lg text-sm flex items-center",
                   remove: "ml-1 text-red-500 cursor-pointer",
@@ -145,13 +145,13 @@ const AddProduct = () => {
             {/* External Link */}
             <div className="form-control">
               <label htmlFor="externalLink" className="label">
-                <span className="label-text">External Link</span>
+                <span className="label-text dark:text-white">External Link</span>
               </label>
               <input
                 type="url"
                 id="externalLink"
                 name="externalLink"
-                className="input input-bordered bg-white"
+                className="input input-bordered bg-white dark:text-white dark:bg-[#303030] dark:border-white"
                 placeholder="Enter product link"
               />
             </div>
@@ -160,7 +160,7 @@ const AddProduct = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 items-center">
             <div>
               <label className="label">
-                <span className="label-text">Owner Image</span>
+                <span className="label-text dark:text-white">Owner Image</span>
               </label>
               <img
                 src={user?.photoURL || ""}
@@ -170,7 +170,7 @@ const AddProduct = () => {
             </div>
             <div>
               <label className="label">
-                <span className="label-text">Owner Name</span>
+                <span className="label-text dark:text-white">Owner Name</span>
               </label>
               <input
                 type="text"
@@ -181,7 +181,7 @@ const AddProduct = () => {
             </div>
             <div>
               <label className="label">
-                <span className="label-text">Owner Email</span>
+                <span className="label-text dark:text-white">Owner Email</span>
               </label>
               <input
                 type="email"

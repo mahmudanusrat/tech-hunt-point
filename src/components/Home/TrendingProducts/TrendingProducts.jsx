@@ -6,7 +6,7 @@ import ProductCard from "../../../pages/Products/ProductCard";
 import LoadingSpinner from "../../Shared/LoadingSpinner/LoadingSpinner";
 
 const TrendingProducts = () => {
-   const {
+  const {
     data: trendingProducts = [],
     isLoading,
     isError,
@@ -34,10 +34,11 @@ const TrendingProducts = () => {
   // Sort products based on vote count
   const sortedProducts = trendingProducts.sort((a, b) => b.votes - a.votes);
   return (
-    <div className="container pb-20 px-6 text-[#003a43] dark:text-white mx-auto">
-<div className="mb-6 space-y-3">
-      <h1 className="text-5xl font-semibold tracking-wide ">What’s Hot</h1>
-      <p className="text-xl">Top-voted products by our community.</p>
+    <div className=" text-[#003a43] bg-[#f8f3eb] dark:bg-[#303030] dark:text-white mx-auto" id="trending-products">
+      <div className="container mx-auto py-10 px-6">
+      <div className="mb-6 space-y-3 text-center">
+        <h1 className="text-5xl font-semibold tracking-wide ">What’s Hot</h1>
+        <p className="text-xl">Top-voted products by our community.</p>
       </div>
       <div className="grid grid-cols-1  gap-6">
         {sortedProducts.slice(0, 6).map((product) => (
@@ -51,6 +52,8 @@ const TrendingProducts = () => {
           </button>
         </Link>
       </div>
+        </div>
+        
     </div>
   );
 };

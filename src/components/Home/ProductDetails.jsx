@@ -68,11 +68,11 @@ const ProductDetails = () => {
   if (isLoading || isReviewsLoading) return <LoadingSpinner></LoadingSpinner>;
 
   return (
-    <div className="container mx-auto px-4 py-6 text-[#003a43]">
+    <div className="container mx-auto px-4 py-6 text-[#003a43] dark:bg-[#303030]">
       <Helmet>
         <title>Products</title>
       </Helmet>
-      <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
+      <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-start md:items-center gap-4 dark:bg-[#303030] dark:text-white">
         <img
           src={image}
           alt={name}
@@ -85,7 +85,7 @@ const ProductDetails = () => {
             href={product.externalLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-transparent border-2 border-[#003a43] px-2 py-2 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300 flex gap-1 items-center"
+            className="bg-transparent border-2 border-[#003a43] dark:border-white px-2 py-2 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300 flex gap-1 items-center"
           >
             Visit{" "}
             <span>
@@ -119,14 +119,14 @@ const ProductDetails = () => {
           />
         </div>
       </div>
-      <section className="mt-8">
+      <div className="mt-8 dark:text-white">
         <h3 className="text-2xl font-bold mb-4">Reviews</h3>
 
         {reviews.length > 0 ? (
           reviews.map((review) => (
             <div
               key={review._id}
-              className="bg-white shadow-lg rounded-lg p-4 mb-4"
+              className="bg-white dark:bg-[#303030]  shadow-lg rounded-lg p-4 mb-4"
             >
               <div className="flex items-center gap-4 mb-2">
                 <img
@@ -150,7 +150,7 @@ const ProductDetails = () => {
         {/* Review Form */}
         {isLoggedIn && (
           <form
-            className="bg-gray-100 shadow-lg rounded-lg p-4 mb-6"
+            className="bg-gray-100 dark:bg-[#303030] dark:text-white shadow-lg rounded-lg p-4 mb-6"
             onSubmit={(e) => {
               e.preventDefault();
               const description = e.target.description.value;
@@ -160,23 +160,23 @@ const ProductDetails = () => {
             }}
           >
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
                 Review Description
               </label>
               <textarea
                 name="description"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md dark:bg-[#303030]"
                 placeholder="Write your review..."
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700  mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-white mb-2">
                 Rating
               </label>
               <select
                 name="rating"
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-2 border rounded-md dark:bg-[#303030]"
                 required
               >
                 <option value="">Select Rating</option>
@@ -193,7 +193,7 @@ const ProductDetails = () => {
             </button>
           </form>
         )}
-      </section>
+      </div>
     </div>
   );
 };

@@ -37,9 +37,9 @@ const FAQ = () => {
   };
 
   return (
-    <div className="text-[#003a43] bg-[#f8f3eb]">
+    <div className="text-[#003a43] bg-[#f8f3eb] dark:bg-[#303030] dark:text-white" id="faq">
       <div className="container py-20 px-6 mx-auto">
-        <h1 className="text-5xl font-semibold tracking-wide mb-16 text-center dark:text-white">
+        <h1 className="text-5xl font-semibold tracking-wide mb-16 text-center">
           Frequently Asked Questions
         </h1>
         <div className="space-y-4 max-w-6xl mx-auto">

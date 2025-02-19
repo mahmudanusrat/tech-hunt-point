@@ -46,7 +46,7 @@ const ProductReview = () => {
     
   
   return (
-    <div className="p-6 bg-gray-50 min-h-screen text-[#003a43]">
+    <div className="p-6 bg-gray-50 min-h-screen text-[#003a43] dark:bg-[#303030] dark:text-white">
     <h1 className="text-2xl font-bold mb-6 text-center">Review Pending Submissions</h1>
     <table className="table-auto w-full border-collapse border border-gray-300">
       <thead className="bg-gray-200">

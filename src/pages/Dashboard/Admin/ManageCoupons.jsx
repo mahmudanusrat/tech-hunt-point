@@ -66,7 +66,7 @@ const ManageCoupons = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
+    <div className="p-6 bg-gray-50 dark:bg-[#303030] dark:text-white min-h-screen">
       <h1 className="text-2xl font-bold text-center mb-6">Manage Coupons</h1>
 
       <form onSubmit={handleSubmit} className="mb-8 space-y-4">
@@ -77,7 +77,7 @@ const ManageCoupons = () => {
               type="text"
               value={formData.code}
               onChange={(e) => setFormData({ ...formData, code: e.target.value })}
-              className="input input-bordered w-full"
+              className="input input-bordered w-full dark:text-[#303030]"
               required
             />
           </div>
@@ -89,7 +89,7 @@ const ManageCoupons = () => {
               onChange={(e) =>
                 setFormData({ ...formData, expiryDate: e.target.value })
               }
-              className="input input-bordered w-full"
+              className="input input-bordered w-full dark:text-[#303030]"
               required
             />
           </div>
@@ -101,7 +101,7 @@ const ManageCoupons = () => {
               onChange={(e) =>
                 setFormData({ ...formData, discount: e.target.value })
               }
-              className="input input-bordered w-full"
+              className="input input-bordered w-full dark:text-[#303030]"
               required
             />
           </div>
@@ -112,7 +112,7 @@ const ManageCoupons = () => {
               onChange={(e) =>
                 setFormData({ ...formData, description: e.target.value })
               }
-              className="textarea textarea-bordered w-full"
+              className="input input-bordered w-full dark:text-[#303030]"
               required
             ></textarea>
           </div>
@@ -127,7 +127,7 @@ const ManageCoupons = () => {
 
       <div className="overflow-x-auto">
         <table className="table w-full">
-          <thead>
+          <thead className="dark:text-white">
             <tr>
               <th>#</th>
               <th>Code</th>

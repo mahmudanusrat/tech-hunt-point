@@ -34,14 +34,14 @@ const ManageUsers = () => {
   if (isLoading) return <LoadingSpinner />;
 
   return (
-    <div className="p-2 md:p-8 bg-gray-50 min-h-screen text-[#003a43] ">
+    <div className="p-2 md:p-8 bg-gray-50 min-h-screen dark:bg-[#303030] dark:text-white text-[#003a43] ">
       <Helmet>
         <title>My Users | Dashboard</title>
       </Helmet>
       <h1 className="text-3xl font-semibold text-center mb-6">My Users</h1>
       
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200">
+        <table className="min-w-full dark:bg-[#303030] dark:text-white  border border-gray-200">
           <thead>
             <tr>
               <th className="px-4 py-2 border"> Name</th>

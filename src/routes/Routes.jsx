@@ -6,7 +6,6 @@ import Login from "../pages/Login/Login";
 import Registration from "../pages/Registration/Registration";
 import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../layouts/DashboardLayout";
-import MyProfile from "../pages/Dashboard/User/MyProfile";
 import MyProducts from "../pages/Dashboard/User/MyProducts";
 import AddProduct from "../pages/Dashboard/User/AddProduct";
 import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
@@ -19,6 +18,7 @@ import ProductReview from "../pages/Dashboard/Moderator/ProductReview";
 import ReportedContents from "../pages/Dashboard/Moderator/ReportedContents";
 import ModeratorRoute from "./ModeratorRoute";
 import AdminRoute from "./AdminRoute";
+import MyProfile from "../pages/Dashboard/Common/MyProfile";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "my-profile",
+        index: true,
         element: (
           <PrivateRoute>
             <MyProfile />
@@ -109,7 +109,7 @@ export const router = createBrowserRouter([
       },
 
       {
-        index: true,
+        path: "statistic",
         element: (
           <PrivateRoute>
             <AdminRoute>
