@@ -1,68 +1,44 @@
 import React from "react";
 
 const UserReviews = () => {
-  const reviews = [
-    {
-      id: 1,
-      productName: "Product A",
-      rating: 4,
-      review:
-        "Fantastic product! It really improved my workflow. Highly recommend it!",
-      user: "User123",
-      imgSrc: "https://via.placeholder.com/200",
-    },
-    {
-      id: 2,
-      productName: "Product B",
-      rating: 5,
-      review:
-        "The best tool I’ve used for project management. Great features and easy to use.",
-      user: "User456",
-      imgSrc: "https://via.placeholder.com/200",
-    },
-    // Add more reviews here
-  ];
-
   return (
-    <div className="container pb-20 px-6 text-[#003a43] dark:text-white mx-auto">
-      <div className="mb-6 space-y-3 text-center">
-        <h1 className="text-5xl font-semibold tracking-wide  ">
-          Users Reviews & Ratings
+    <div className="container pb-20 px-6 text-[#003a43] mx-auto">
+      <div className="mb-6 space-y-3 text-center dark:text-white">
+        <h1 className="text-5xl font-semibold tracking-wide">
+          The People Who Know Products
         </h1>
-        <p className="text-xl">Top-voted products by our community.</p>
+        <p className="text-xl">
+          Curating only the best in tech is literally what we do. All day. Every
+          day. We're very good at it.
+        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-        {reviews.map((review) => (
+      <div className="mt-10 grid md:grid-cols-3 gap-6">
+        {[
+          {
+            id: 1,
+            review:
+              "“For me it is a great source of inspiration. I get ideas and feel very creative after browsing PH and also the newsletter is just fantastic. Great gift of the internet.”",
+            user: "Samin Chowdhury",
+          },
+          {
+            id: 2,
+            review:
+              "“Your newsletter is one of the very few that I read on a daily basis. It’s on one hand the copy, but above all the content and the quality of the apps you post (almost) e v e r y d a y !”",
+            user: "Creatif Comunicación",
+          },
+          {
+            id: 3,
+            review:
+              "“I tell everyone who I think would care about Product Hunt. It is literally the only daily or weekly or monthly newsletter that I check out regularly. And I save them if I can’t read them on the day of.”",
+            user: "Shelby Joy Scarbrough",
+          },
+        ].map((review) => (
           <div
             key={review.id}
-            className="card w-full bg-white shadow-xl rounded-lg p-4"
+            className="bg-[#f8f3eb] p-6 rounded-lg shadow transform transition-transform duration-300 hover:scale-105 will-change-transform"
           >
-            <img
-              src={review.imgSrc}
-              alt={review.productName}
-              className="rounded-lg w-full h-48 object-cover"
-            />
-            <div className="mt-4">
-              <h3 className="text-xl font-semibold">{review.productName}</h3>
-              <div className="flex items-center my-2">
-                {[...Array(5)].map((_, index) => (
-                  <span
-                    key={index}
-                    className={`text-yellow-500 ${
-                      index < review.rating
-                        ? "text-yellow-500"
-                        : "text-gray-300"
-                    }`}
-                  >
-                    ★
-                  </span>
-                ))}
-              </div>
-              <p className="text-gray-700">{review.review}</p>
-              <p className="text-sm font-semibold text-gray-500 mt-2">
-                - {review.user}
-              </p>
-            </div>
+            <p className="italic">{review.review}</p>
+            <h4 className="mt-4 font-bold">{review.user}</h4>
           </div>
         ))}
       </div>
