@@ -29,7 +29,7 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <div className="container py-10 px-6 text-[#003a43] mx-auto">
+    <div className="container py-20 px-6 text-[#003a43] mx-auto">
       <div className="mb-12 space-y-3 text-center dark:text-white">
         <h1 className="text-5xl font-semibold tracking-wide">
           Upcoming Events & New Releases
