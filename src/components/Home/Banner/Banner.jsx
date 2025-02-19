@@ -15,7 +15,7 @@ const Banner = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
-        <h1 className="text-5xl font-semibold tracking-wide mb-6">
+        <h1 className="text-3xl md:text-5xl font-semibold tracking-wide mb-6">
           Empowering the Next Generation of Tech Innovators 🚀
         </h1>
         <p className="text-lg font-extralight mb-8 leading-relaxed">
@@ -56,12 +56,12 @@ const Banner = () => {
         </div>
         <div className="flex justify-center space-x-4">
           <Link to="/products">
-            <button className="bg-[#ff8d6e]  border-2 hover:border-[#ff8d6e] px-8 py-5 rounded-full font-semibold hover:bg-[#ffb19c] transition duration-300 shadow-lg">
+            <button className="bg-[#ff8d6e]  border-2 hover:border-[#ff8d6e] px-4 py-3 md:px-8 md:py-5 rounded-full font-semibold hover:bg-[#ffb19c] transition duration-300 shadow-lg">
               Explore Products
             </button>
           </Link>
           <Link to="/products">
-            <button className="bg-transparent border-2 border-[#003a43] dark:border-white px-8 py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
+            <button className="bg-transparent border-2 border-[#003a43] dark:border-white px-4 py-3 md:px-8 md:py-5 rounded-full font-semibold hover:bg-[#b5dad3] transition duration-300">
               Join the Community
             </button>
           </Link>

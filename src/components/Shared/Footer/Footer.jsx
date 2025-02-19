@@ -5,8 +5,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-[#003a43] p-2 md:p-8 ">
-      <footer className="footer md:flex justify-between text-[#f8f3eb] ">
+    <div className=" bg-[#003a43] dark:bg-[#303030] p-2 md:p-8 ">
+     <div className="container mx-auto">
+     <footer className="footer md:flex justify-between text-[#f8f3eb] ">
         <nav>
           <Link to="/" className="flex items-center">
             <img src={logo} className="w-12 h-12" alt="" />
@@ -39,6 +40,8 @@ const Footer = () => {
           </p>
         </aside>
       </footer>
+      </div> 
+      
     </div>
   );
 };

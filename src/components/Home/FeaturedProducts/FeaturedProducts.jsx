@@ -22,7 +22,7 @@ const FeaturedProducts = () => {
   if (isLoading) return <LoadingSpinner />;
 
   return (
-    <div className="py-20 px-6 text-[#003a43]">
+    <div className="container py-20 px-6 text-[#003a43] dark:text-white mx-auto">
       <div className=" mb-6 space-y-3">
         <h1 className="text-5xl font-semibold tracking-wide">Featured Gems</h1>
         <p className="text-xl">Spotlighting the latest and greatest.</p>
